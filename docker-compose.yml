@@ -6,6 +6,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - "9090:9090"
+    environment:
+      - SERVER_PORT=9090
+      - spotify.client-id=4e40fb9b04414e02a80798c713b544b7
+      - spotify.client-secret=c47e27ee74de4887818b91f75248c3b2
+      - spotify.redirect-uri=http://127.0.0.1:8080/callback
 
   frontend:
     build:
